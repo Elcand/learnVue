@@ -1,7 +1,5 @@
 <script setup>
-import MainButton from './components/MainButton.vue'
-import OptionsComponent from './components/OptionsComponent.vue'
-import CompositionComponent from './components/CompositionComponent.vue'
+import MainButton from './components/MainButton.vue' // local, atau untuk dstu halaman saja
 const name = 'ikel'
 </script>
 
