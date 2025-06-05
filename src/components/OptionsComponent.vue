@@ -7,7 +7,7 @@ export default {
   },
   methods: {
     showName() {
-      console.log(name)
+      console.log(this.name)
     },
   },
 }
