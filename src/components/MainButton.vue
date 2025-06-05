@@ -11,10 +11,17 @@ const renderIsLoading = () => {
     return 'submit'
   }
 }
+
+const url = {
+  attr: 'href',
+  link: '/home,',
+}
 </script>
 
 <template>
-  <button v-bind="buttonAttr" :id="'id-${1}'">{{ renderIsLoading() }}</button>
+  <a :[url.attr]="url.link">
+    <button v-bind="buttonAttr" :id="'id-${1}'">{{ renderIsLoading() }}</button>
+  </a>
 </template>
 
 <style scoped></style>
