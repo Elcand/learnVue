@@ -1,6 +1,4 @@
 <script scoped>
-import { name } from '@vue/eslint-config-prettier/skip-formatting'
-
 export default {
   data() {
     return {
