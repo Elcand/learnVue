@@ -1,14 +1,29 @@
 <script setup>
 import MainButton from './components/MainButton.vue' // local, atau untuk dstu halaman saja
-const name = 'ikel'
+const greeting = 'Halo Kimo'
+const blogPost = '<p style="color: red;">Kualitas Jaringan Telkom</p>'
+const idblog = 'blog-1'
+const classBlog = 'class-1'
+const disableButton = false // untuk value boolean
+const isLoading = true
+const buttonAttr = {
+  disabled : isLoading,
+  class : classBlog,
+  id : idblog,
+}
 </script>
 
 <template>
-  <h1>Halo Kimo!</h1>
-  <p>{{ name }}</p>
-  <MainButton />
+  <p>{{ greeting }}</p>
+  <MainButton :disabled="disableButton"/>
   <OptionsComponent />
-  <CompositionComponent/>
+  <CompositionComponent />
+  <div :id="idblog" :class="classBlog">
+    <p>{{ blogPost }}</p></div>
+  <div>
+    <p v-html="blogPost"></p>
+  </div>
+  <button v-bind="buttonAttr">{{ isLoading ? 'Loading' : 'Submit' }}</button>
 </template>
 
 <style scoped></style>
