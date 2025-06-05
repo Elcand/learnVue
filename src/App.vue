@@ -15,7 +15,9 @@ const buttonAttr = {
 
 <template>
   <p>{{ greeting }}</p>
-  <MainButton :disabled="disableButton"/>
+  <MainButton :title="'test'"/>
+  <MainButton :title="'submit '"/>
+  <MainButton :title="'click'"/>
   <OptionsComponent />
   <CompositionComponent />
   <div :id="idblog" :class="classBlog">
