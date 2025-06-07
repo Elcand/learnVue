@@ -1,12 +1,28 @@
 <script setup>
-const { title = 'Button', disabled = true } = defineProps({
+const { title = 'klik', disabled = false } = defineProps({
   title: String,
   disabled: Boolean,
 })
+const disabledColor = '#000'
+const availableColor = '#fff'
 </script>
 
 <template>
-  <button :disabled>{{ title }}</button>
+  <button
+    :disabled
+    class="button"
+    :class="{ disabled: disabled }"
+    :style="{ color: disabled ? disabledColor : availableColor }"
+  >
+    {{ title }}
+  </button>
 </template>
 
-<style scoped></style>
+<style scoped>
+.button {
+  background-color: salmon;
+  border: none;
+  padding: 2px 4px;
+  color: white;
+}
+</style>
