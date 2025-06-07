@@ -8,7 +8,9 @@ const availableColor = '#fff'
 </script>
 
 <template>
+  <label>test</label>
   <button
+  v-bind="$attrs"
     :disabled
     class="button"
     :class="{ disabled: disabled }"
