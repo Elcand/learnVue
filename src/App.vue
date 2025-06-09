@@ -17,7 +17,7 @@ const picked = ref('')
 </script>
 
 <template>
-  <MainButton @click="toggleDisable" :disabled class="btn" />
+  <!-- <MainButton @click="toggleDisable" :disabled class="btn" /> -->
   <button @click="(event) => console.log(event)" @mouseover="increment(10)">{{ count }}</button>
 
   <input @keyup="() => console.log('test')" />
@@ -35,6 +35,12 @@ const picked = ref('')
   <br /><br />
   <p>{{ picked }}</p>
   <!-- <li v-for="item in checked" :key="item">{{ item }}</li> -->
+  <br /><br />
+  <MainButton>
+    <template #default="{ title, subtitle }">
+      <h3>{{ title }} {{ subtitle }} TPTP</h3>
+    </template>
+  </MainButton>
 </template>
 
 <style scoped></style>
