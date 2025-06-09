@@ -7,6 +7,8 @@ import OptionsComponent from './components/OptionsComponent.vue'
 
 const app = createApp(App)
 
+app.provide('nameApp', 'Aplikasi Saya')
+
 app
   .component('CompositionComponent', CompositionComponent)
   .component('OptionsComponent', OptionsComponent) // penjelsan dibawah

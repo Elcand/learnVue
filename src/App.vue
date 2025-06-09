@@ -1,6 +1,7 @@
 <script setup>
-import { ref } from 'vue'
+import { provide, ref } from 'vue'
 import MainButton from './components/MainButton.vue'
+import CompositionComponent from './components/CompositionComponent.vue'
 const disabled = ref(false)
 const toggleDisable = () => {
   disabled.value = !disabled.value
@@ -11,9 +12,14 @@ const increment = (counter) => {
   count.value = count.value + counter
 }
 
-const name = ref('')
+const name = ref('Cand')
 const desc = ref('')
 const picked = ref('')
+function UpdateName() {
+  name.value = 'Mikhael Candra'
+}
+
+provide('name', { name, UpdateName })
 </script>
 
 <template>
@@ -41,6 +47,8 @@ const picked = ref('')
       <h3>{{ title }} {{ subtitle }} TPTP</h3>
     </template>
   </MainButton>
+
+  <CompositionComponent />
 </template>
 
 <style scoped></style>
